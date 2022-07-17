@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from "react";
 import './App.css';
+import {
+    BrowserRouter,
+    Route,
+    Routes
+} from "react-router-dom";
+import Table from "./components/Table";
+import DetailComponent from "./components/IndividualPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+window.DATA_PRODUCT = [];
+window.API_PRODUCT_ALL = "https://f2byongc84.execute-api.eu-central-1.amazonaws.com/webdev_test_fetch_batteries";
+
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Table />} />
+                        <Route path="/detail/:Id" element={<DetailComponent />}></Route>
+                    </Routes>
+                </BrowserRouter>
+            </div>
+        )
+    }
 }
 
 export default App;
+
