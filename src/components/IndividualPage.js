@@ -4,11 +4,6 @@ import { useParams } from 'react-router';
 import Axios from "axios";
 import "../index.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart } from '@fortawesome/free-regular-svg-icons'
-import { faBatteryQuarter } from '@fortawesome/free-solid-svg-icons'
-import { faTemperatureHigh } from '@fortawesome/free-solid-svg-icons'
-import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
-import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 

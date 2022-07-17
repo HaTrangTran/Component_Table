@@ -9,16 +9,6 @@ import { faSortUp } from '@fortawesome/free-solid-svg-icons'
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 
 const TableBody = ({ columns, tableData, handleOnClick }) => {
-
-    //const history = useNavigate()
-
-    //const navigateTo = id => {
-    //    history.push(`/${id}`)
-    //}
-
-    //const navigate = useNavigate();
-    //const handleOnClick = useCallback((d) => navigate('/detail/' + d.id, { replace: true }), [navigate]);
-
     return (
         <tbody>
             {tableData.map((data) => {
@@ -27,7 +17,6 @@ const TableBody = ({ columns, tableData, handleOnClick }) => {
                         {columns.map(({ accessor }) => {
                             const tData = data[accessor] ? data[accessor] : "N/A";
                             return <td key={accessor} >{tData}</td>;
-                            /*return (accessor === "id" ? (<td key={accessor} onclick={() => handleOnClick(tData)}> {tData} </td>) : (<td key={accessor} > {tData} </td>));*/
                         })}
                     </tr>
                 );

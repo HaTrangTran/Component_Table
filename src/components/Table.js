@@ -1,13 +1,3 @@
-//import axios from 'axios'
-///*import './products.css';*/
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-//import { faSort } from '@fortawesome/free-solid-svg-icons'
-//import { faSortUp } from '@fortawesome/free-solid-svg-icons'
-//import { faSortDown } from '@fortawesome/free-solid-svg-icons'
-//import { useState } from "react";
-//import TableBody from "./TableBody";
-//import TableHead from "./TableHead";
-
 import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from 'react-router-dom';
 import Axios from "axios";
@@ -21,7 +11,6 @@ function Table() {
         { label: "Location Name", accessor: "location", sortable: true },
         { label: "Capacity", accessor: "capacity", sortable: false },
         { label: "Voltage", accessor: "voltage", sortable: false },
-        /* { label: "Connection Status", accessor: "connectionStatus" },*/
         { label: "Last Connection Time", accessor: "lastConnectionTime", sortable: false },
         { label: "State Of Charge", accessor: "stateOfCharge", sortable: true },
         { label: "State Of Health", accessor: "stateOfHealth", sortable: false },
@@ -33,7 +22,6 @@ function Table() {
     const [loadingData, SetLoadingData] = useState(true);
 
     const [query, setQuery] = useState("");
-    /*const keys = ["id", "location", "connectionStatusId", "stateOfCharge"];*/
     const search = (data) => {
         return data.filter((item) =>
             item.id.toLowerCase().includes(query) ||

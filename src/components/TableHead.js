@@ -1,11 +1,5 @@
 import React from 'react'
 import { useState } from "react";
-//import { MouseEventHandler, useCallback, useState } from "react";
-//import axios from 'axios'
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-//import { faSort } from '@fortawesome/free-solid-svg-icons'
-//import { faSortUp } from '@fortawesome/free-solid-svg-icons'
-//import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 
 const TableHead = ({ columns, handleSorting }) => {
     const [sortField, setSortField] = useState("");
