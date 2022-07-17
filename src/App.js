@@ -15,7 +15,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <BrowserRouter basename={window.location.pathname || ''}>
+                <BrowserRouter basename="/React_App_Battery">
                     <Routes>
                         <Route path="/" element={<Table />} />
                         <Route path="/detail/:Id" element={<DetailComponent />}></Route>
