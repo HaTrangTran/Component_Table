@@ -15,7 +15,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <BrowserRouter>
+                <BrowserRouter basename={window.location.pathname || ''}>
                     <Routes>
                         <Route path="/" element={<Table />} />
                         <Route path="/detail/:Id" element={<DetailComponent />}></Route>
